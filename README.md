@@ -52,6 +52,6 @@ The ArmBrain project aims to build a full **6DOF arm** with cycloidal reducers a
 ### Why This Project?
 18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1. Goal: Just to prove a point — to make something from nothing.
 
-**Looking for:** PCB sponsors (PCBWay/JLCPCB), Mechatronics internship NL/SA 2027
+**Looking for:** Mechatronics internship NL/SA 2027
 
 Built by [@Denni112-glitch](https://github.com/Denni112-glitch) | Future Mechatronics @ Sol-Tech

@@ -1,6 +1,8 @@
-# ArmBrain-J2 - 6DOF Robot Arm + Haptic Glove Teleop System
+# ArmBrain Project
 
 **Built from Fouriesburg, Free State, SA 🇿🇦 | 9725**
+
+## Shoulder Joint Development
 
 ## ❤️ Official Hardware Sponsor
 
@@ -10,13 +12,17 @@
   </a>
 </div>
 
+This project is part of the broader **ArmBrain** robot arm system, with the **J2 shoulder joint** as the current focus of development. The repository documents the J2 design, mechanical build, testing, and integration into the larger 6-DOF arm.
+
 This project is proudly supported by **[PCBWay](https://www.pcbway.com/)** — a trusted platform for custom PCB fabrication and assembly for makers, researchers, and hardware builders.
 
 Big thanks to PCBWay for backing open-source hardware innovation! 🙏
 
 [Order your own PCBs with PCBWay](https://www.pcbway.com/)
 
-Full 6DOF arm with cycloidal reducers + custom haptic glove for teleoperation. Inspired by SenseGlove.
+![Powered by PCBWay](https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway)
+
+The ArmBrain project aims to build a full 6DOF arm with cycloidal reducers and a custom haptic glove for teleoperation. The J2 shoulder joint is one critical subsystem within this larger system, inspired by SenseGlove.
 
 ![Render 1](<IMG-20261001-WA0018 (1).jpeg>)
 

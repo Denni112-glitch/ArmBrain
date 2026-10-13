@@ -6,7 +6,7 @@
 <title>Denis Long — ArmBrain J2</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#08080a;--card:#121214;--card2:#18181b;--text:#fafafa;--muted:#a1a1aa;--dim:#52525b;--accent:#ccff00;--border:#27272a;--blue:#2a9df4}
+:root{--bg:#08080a;--card:#121214;--card2:#18181b;--text:#fafafa;--muted:#a1a1aa;--dim:#52525b;--accent:#ccff00;--border:#27272a;--blue:#2a9df4;--gold:#ffdd00;--gold-dark:#d4b500}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;line-height:1.6;overflow-x:hidden;position:relative}
 body::before{content:"";position:fixed;inset:0;z-index:-2;background:
@@ -32,13 +32,12 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 .btn-primary:hover{box-shadow:0 0 0 4px rgba(42,157,244,0.6), 0 0 20px rgba(42,157,244,0.4);transform:translateY(-2px)}
 .btn-ghost{border:1px solid var(--border);background:var(--card);color:#fff}
 .btn-ghost:hover{border-color:var(--accent);box-shadow:0 0 0 4px rgba(204,255,0,0.25), 0 0 20px rgba(204,255,0,0.15);transform:translateY(-2px)}
-.sponsor-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 20px;margin:16px 0 24px;border:1px solid rgba(204,255,0,0.35);border-radius:16px;background:linear-gradient(135deg, rgba(204,255,0,0.09), rgba(42,157,244,0.06));backdrop-filter:blur(10px)}
-.sponsor-banner .copy{font-size:14px;color:var(--muted);max-width:650px}
+.sponsor-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 22px;margin:10px 0 24px;border:1px solid rgba(255,221,0,0.5);border-radius:18px;background:linear-gradient(135deg, rgba(255,221,0,0.12), rgba(42,157,244,0.08), rgba(255,255,255,0.02));box-shadow:0 0 0 1px rgba(255,221,0,0.15),0 18px 40px rgba(0,0,0,0.25);backdrop-filter:blur(10px)}
+.sponsor-banner .copy{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.sponsor-banner .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,221,0,0.12);border:1px solid rgba(255,221,0,0.45);color:var(--gold);font-size:10px;letter-spacing:1.3px;text-transform:uppercase;font-weight:700}
 .sponsor-banner strong{color:var(--text)}
-.sponsor-banner .badge{display:inline-block;margin-right:8px;padding:6px 10px;border-radius:999px;background:rgba(204,255,0,0.12);border:1px solid rgba(204,255,0,0.4);color:var(--accent);font-size:10px;letter-spacing:1.2px;text-transform:uppercase}
-.sponsor-banner .powered{display:flex;align-items:center;gap:10px}
-.sponsor-banner .powered img{height:28px}
-.sponsor-banner .powered a{color:var(--text);font-weight:700;text-decoration:none}
+.sponsor-banner .powered{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sponsor-banner .powered img{height:32px;display:block;border-radius:8px;box-shadow:0 4px 18px rgba(255,221,0,0.15)}
 .grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:16px;margin:50px 0}
 @media(max-width:700px){.grid{grid-template-columns:1fr}}
 .card{background:rgba(18,18,20,0.9);border:1px solid var(--border);border-radius:20px;padding:26px;backdrop-filter:blur(10px);transition:0.25s}
@@ -86,8 +85,14 @@ footer{padding:40px 0 60px;border-top:1px solid var(--border);color:var(--dim);f
 </div>
 
 <div class="sponsor-banner">
-  <div class="copy"><span class="badge">Sponsor</span><strong>PCBWay</strong> supports this project with professional PCB fabrication and assembly for open-source hardware.</div>
-  <div class="powered"><a href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway" alt="Powered by PCBWay"></a><a class="btn btn-ghost" href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">Order PCBs</a></div>
+  <div class="copy">
+    <span class="badge">Official Sponsor</span>
+    <span><strong>PCBWay</strong> supports this project with high-quality PCB fabrication and assembly.</span>
+  </div>
+  <div class="powered">
+    <img src="https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway&logoColor=black" alt="Powered by PCBWay">
+    <a class="btn btn-ghost" href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">Order PCBs</a>
+  </div>
 </div>
 
 <div class="grid">

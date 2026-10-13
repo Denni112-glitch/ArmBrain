@@ -2,16 +2,19 @@
 
 **Built from Fouriesburg, Free State, SA 🇿🇦 | 9725**
 
-## ❤️ Sponsors
+## ❤️ Official Hardware Sponsor
 
-This project is sponsored by **[PCBWay](https://www.pcbway.com/)** — they provide high-quality PCB fabrication and assembly for this open-source project.
+<div align="center">
+  <a href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Official%20Hardware%20Sponsor-PCBWay-ffdd00?style=for-the-badge&logo=pcbway&logoColor=black" alt="Official Hardware Sponsor - PCBWay" />
+  </a>
+</div>
 
-Big thanks to PCBWay for supporting open-source hardware! 🙏
+This project is proudly supported by **[PCBWay](https://www.pcbway.com/)** — a trusted platform for custom PCB fabrication and assembly for makers, researchers, and hardware builders.
 
-[Order your own PCBs from PCBWay](https://www.pcbway.com/)
+Big thanks to PCBWay for backing open-source hardware innovation! 🙏
 
-
-![Powered by PCBWay](https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway)
+[Order your own PCBs with PCBWay](https://www.pcbway.com/)
 
 Full 6DOF arm with cycloidal reducers + custom haptic glove for teleoperation. Inspired by SenseGlove.
 

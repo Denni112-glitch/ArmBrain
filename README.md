@@ -2,7 +2,7 @@
 
 **Built from Fouriesburg, Free State, SA 🇿🇦 | 9725**
 
-## Shoulder Joint Development
+## Full-System Build
 
 ## ❤️ Official Hardware Sponsor
 
@@ -12,7 +12,7 @@
   </a>
 </div>
 
-This project is part of the broader **ArmBrain** robot arm system, with the **J2 shoulder joint** as the current focus of development. The repository documents the J2 design, mechanical build, testing, and integration into the larger 6-DOF arm.
+This project is the broader **ArmBrain** robot arm system: a full build from nothing, from design and fabrication to electronics, control, and testing. The **J2 shoulder joint** is one subsystem within that larger project, not the only focus.
 
 This project is proudly supported by **[PCBWay](https://www.pcbway.com/)** — a trusted platform for custom PCB fabrication and assembly for makers, researchers, and hardware builders.
 
@@ -22,7 +22,7 @@ Big thanks to PCBWay for backing open-source hardware innovation! 🙏
 
 ![Powered by PCBWay](https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway)
 
-The ArmBrain project aims to build a full 6DOF arm with cycloidal reducers and a custom haptic glove for teleoperation. The J2 shoulder joint is one critical subsystem within this larger system, inspired by SenseGlove.
+The ArmBrain project aims to build a full **6DOF arm** with cycloidal reducers and a custom **haptic glove** for teleoperation. The J2 shoulder joint is one important subsystem inside the bigger system, alongside the base, elbow, wrist, gripper, and teleop control stack.
 
 ![Render 1](<IMG-20261001-WA0018 (1).jpeg>)
 
@@ -50,7 +50,7 @@ The ArmBrain project aims to build a full 6DOF arm with cycloidal reducers and a
     - `nema 17 v13.step` - Full arm assembly
 
 ### Why This Project?
-18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1 . Goal: Just to prove a point.
+18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1. Goal: Just to prove a point — to make something from nothing.
 
 **Looking for:** PCB sponsors (PCBWay/JLCPCB), Mechatronics internship NL/SA 2027
 

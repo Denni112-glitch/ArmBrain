@@ -2,6 +2,17 @@
 
 **Built from Fouriesburg, Free State, SA 🇿🇦 | 9725**
 
+## ❤️ Sponsors
+
+This project is sponsored by **[PCBWay](https://www.pcbway.com/)** — they provide high-quality PCB fabrication and assembly for this open-source project.
+
+Big thanks to PCBWay for supporting open-source hardware! 🙏
+
+[Order your own PCBs from PCBWay](https://www.pcbway.com/)
+
+
+![Powered by PCBWay](https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway)
+
 Full 6DOF arm with cycloidal reducers + custom haptic glove for teleoperation. Inspired by SenseGlove.
 
 ![Render 1](<IMG-20261001-WA0018 (1).jpeg>)
@@ -21,12 +32,11 @@ Full 6DOF arm with cycloidal reducers + custom haptic glove for teleoperation. I
 - 📟 Next: get the PCB done and working
 - ⏳ Final: Full teleop test Glove -> Arm
 
-
 ### Hardware
 - **Motors:** Nema 23 (J2) + Nema 17 (J1,J3-J5)
 - **Reducers:** Custom 3D printed cycloidal drives
 - **Sensors:** AS5600 magnetic encoders with diametric magnets
-- **Files:** 
+- **Files:**
     - `Nema 23 Shoulder v7.step` - Shoulder CAD
     - `nema 17 v13.step` - Full arm assembly
 

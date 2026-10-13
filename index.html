@@ -3,144 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Denis Long — ArmBrain Project</title>
+<title>ArmBrain Project</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#08080a;--card:#121214;--card2:#18181b;--text:#fafafa;--muted:#a1a1aa;--dim:#52525b;--accent:#ccff00;--border:#27272a;--blue:#2a9df4;--gold:#ffdd00;--gold-dark:#d4b500}
+:root{--bg:#08080a;--card:#121214;--text:#fafafa;--muted:#a1a1aa;--accent:#ffdd00;--border:#27272a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;line-height:1.6;overflow-x:hidden;position:relative}
-body::before{content:"";position:fixed;inset:0;z-index:-2;background:
-radial-gradient(600px at 15% 10%, rgba(204,255,0,0.18), transparent 60%),
-radial-gradient(800px at 85% 30%, rgba(204,255,0,0.12), transparent 60%),
-radial-gradient(500px at 50% 90%, rgba(42,157,244,0.08), transparent 60%),
-linear-gradient(180deg, #08080a 0%, #0f0f0a 50%, #08080a 100%)}
-body::after{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);background-size:28px 28px}
-.mono{font-family:'JetBrains Mono',monospace}
-.wrap{max-width:900px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:10;background:rgba(8,8,10,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 0}
-nav .wrap{display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:700;letter-spacing:-0.5px}
-.logo span{color:var(--accent)}
-.status{font-size:11px;color:var(--muted);border:1px solid var(--border);padding:5px 12px;border-radius:999px;background:rgba(204,255,0,0.05)}
-.hero{padding:90px 0 30px}
-.hero h1{font-size:clamp(42px,8vw,74px);line-height:0.9;letter-spacing:-2.5px;font-weight:700}
-.hero h1 em{font-style:normal;color:var(--accent);text-shadow:0 0 30px rgba(204,255,0,0.4)}
-.hero .sub{margin-top:22px;font-size:18px;color:var(--muted);max-width:580px}
-.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:14px 24px;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;transition:0.25s;border:1px solid transparent}
-.btn-primary{background:#fff;color:#000;box-shadow:0 0 0 0 transparent}
-.btn-primary:hover{box-shadow:0 0 0 4px rgba(42,157,244,0.6), 0 0 20px rgba(42,157,244,0.4);transform:translateY(-2px)}
-.btn-ghost{border:1px solid var(--border);background:var(--card);color:#fff}
-.btn-ghost:hover{border-color:var(--accent);box-shadow:0 0 0 4px rgba(204,255,0,0.25), 0 0 20px rgba(204,255,0,0.15);transform:translateY(-2px)}
-.sponsor-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 22px;margin:10px 0 24px;border:1px solid rgba(255,221,0,0.5);border-radius:18px;background:linear-gradient(135deg, rgba(255,221,0,0.12), rgba(42,157,244,0.08), rgba(255,255,255,0.02));box-shadow:0 0 0 1px rgba(255,221,0,0.15),0 18px 40px rgba(0,0,0,0.25);backdrop-filter:blur(10px)}
-.sponsor-banner .copy{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
-.sponsor-banner .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,221,0,0.12);border:1px solid rgba(255,221,0,0.45);color:var(--gold);font-size:10px;letter-spacing:1.3px;text-transform:uppercase;font-weight:700}
-.sponsor-banner strong{color:var(--text)}
-.sponsor-banner .powered{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.sponsor-banner .powered img{height:32px;display:block;border-radius:8px;box-shadow:0 4px 18px rgba(255,221,0,0.15)}
-.grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:16px;margin:50px 0}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
-.card{background:rgba(18,18,20,0.9);border:1px solid var(--border);border-radius:20px;padding:26px;backdrop-filter:blur(10px);transition:0.25s}
-.card:hover{border-color:var(--blue);box-shadow:0 0 0 4px rgba(42,157,244,0.5), 0 0 30px rgba(42,157,244,0.2);transform:translateY(-3px)}
-.card h3{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
-.spec{padding:12px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;font-size:14px}
-.spec:last-child{border:none}
-.spec span:first-child{color:var(--muted)}
-.tag{display:inline-block;font-size:11px;padding:6px 12px;border-radius:999px;border:1px solid var(--border);background:var(--card2);margin:4px 4px 0 0;color:var(--muted);transition:0.2s}
-.tag:hover{border-color:var(--accent);color:var(--accent)}
-.about{margin:20px 0 40px;padding:40px;border-radius:24px;background:linear-gradient(135deg, rgba(18,18,20,0.95), rgba(24,24,12,0.9));border:1px solid var(--border);backdrop-filter:blur(10px);position:relative;transition:0.25s}
-.about::before{content:"";position:absolute;top:-50%;left:-30%;width:80%;height:200%;background:radial-gradient(ellipse, rgba(204,255,0,0.08), transparent 60%);pointer-events:none}
-.about:hover{border-color:var(--blue);box-shadow:0 0 0 4px rgba(42,157,244,0.5), 0 0 40px rgba(42,157,244,0.15)}
-.about h2{font-size:28px;letter-spacing:-1px;margin-bottom:16px}
-.about p{color:var(--muted);font-size:15px;margin-bottom:14px;position:relative}
-.about strong{color:var(--text)}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0 50px}
-@media(max-width:600px){.contact{grid-template-columns:1fr}}
-.contact-card{background:rgba(18,18,20,0.9);border:1px solid var(--border);border-radius:16px;padding:20px;backdrop-filter:blur(10px);transition:0.25s}
-.contact-card:hover{border-color:var(--blue);box-shadow:0 0 0 4px rgba(42,157,244,0.5), 0 0 25px rgba(42,157,244,0.2);transform:translateY(-3px)}
-.contact-card .label{font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
-.contact-card .value{font-weight:600;word-break:break-all}
-.contact-card a{color:var(--text);text-decoration:none}
-.contact-card a:hover{color:var(--accent)}
-.links{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:40px 0}
-@media(max-width:900px){.links{grid-template-columns:repeat(2,1fr)}}
-.link-card{background:rgba(18,18,20,0.9);border:1px solid var(--border);border-radius:16px;padding:20px;text-decoration:none;color:inherit;transition:0.25s;backdrop-filter:blur(10px)}
-.link-card:hover{border-color:var(--blue);box-shadow:0 0 0 4px rgba(42,157,244,0.6), 0 0 30px rgba(42,157,244,0.25);transform:translateY(-4px)}
-.link-card .label{font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
-.link-card .value{font-weight:600;font-size:14px}
-footer{padding:40px 0 60px;border-top:1px solid var(--border);color:var(--dim);font-size:13px;display:flex;justify-content:space-between}
+body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;line-height:1.6}
+.wrap{max-width:920px;margin:40px auto;padding:0 20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.brand{font-weight:700;letter-spacing:-0.5px}
+.brand span{color:var(--accent)}
+.meta{color:var(--muted);font-size:14px}
+.card{background:rgba(18,18,20,0.9);border:1px solid var(--border);border-radius:16px;padding:24px}
+h1{font-size:clamp(32px,5vw,48px);letter-spacing:-1.5px;margin-bottom:10px}
+h2{font-size:22px;margin:18px 0 10px}
+p,li{color:var(--muted);font-size:15px}
+strong{color:var(--text)}
+ul{padding-left:18px;margin-top:12px}
+li{margin:5px 0}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--accent);color:#000;text-decoration:none;font-weight:700;border:1px solid transparent}
+.btn.secondary{background:transparent;border-color:var(--border);color:var(--text)}
+.small{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:18px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.link-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+@media (max-width:520px){.link-list{grid-template-columns:1fr}}
+.link-item{display:block;padding:12px 14px;border:1px solid var(--border);border-radius:12px;color:var(--text);text-decoration:none;background:rgba(18,18,20,0.8)}
+.link-item:hover{border-color:var(--accent)}
+.footer{margin-top:24px;padding-top:18px;border-top:1px solid var(--border);font-size:13px;color:var(--muted)}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><div class="logo mono">DENIS LONG // <span>ARMBRAIN</span></div><div class="status mono">ZA — ROBOTICS BUILDER</div></div></nav>
-
 <div class="wrap">
-<div class="hero">
-<h1>ARMBRAIN</h1>
-<p class="sub">The ArmBrain project is the full robot arm system, and this page focuses on the shoulder subsystem as part of that broader build. NEMA23 + custom cycloidal gearbox in PETG-CF. Designed, printed and tested from my workshop.</p>
-<div class="btn-row">
-<a class="btn btn-primary" href="https://github.com/Denni112-glitch/ArmBrain-J2" target="_blank">View Build Logs →</a>
-<a class="btn btn-ghost" href="https://www.youtube.com/@Denis_builds08" target="_blank">Watch on YouTube</a>
-</div>
-</div>
-
-<div class="sponsor-banner">
-  <div class="copy">
-    <span class="badge">Official Sponsor</span>
-    <span><strong>PCBWay</strong> supports this project with high-quality PCB fabrication and assembly.</span>
+  <div class="topbar">
+    <div class="brand">DENIS LONG // <span>ARMBRAIN</span></div>
+    <div class="meta">Built from Fouriesburg, Free State, SA 🇿🇦 | 9725</div>
   </div>
-  <div class="powered">
-    <img src="https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway&logoColor=black" alt="Powered by PCBWay">
-    <a class="btn btn-ghost" href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">Order PCBs</a>
+
+  <div class="card">
+    <h1>ArmBrain Project</h1>
+    <p><strong>Shoulder Joint Development</strong></p>
+    <p>This project is part of the broader ArmBrain robot arm system, with the J2 shoulder joint as the current focus of development. The repository documents the J2 design, mechanical build, testing, and ongoing work toward a full 6DOF arm with cycloidal reducers and a custom haptic glove for teleoperation.</p>
+
+    <div style="margin-top:18px">
+      <a href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/Official%20Hardware%20Sponsor-PCBWay-ffdd00?style=for-the-badge&logo=pcbway&logoColor=black" alt="Official Hardware Sponsor - PCBWay">
+      </a>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn" href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">Order PCBs</a>
+      <a class="btn secondary" href="https://www.youtube.com/@Denis_builds08" target="_blank">YouTube Build Logs</a>
+    </div>
   </div>
-</div>
 
-<div class="grid">
-<div class="card">
-<h3>Specs</h3>
-<div class="spec"><span>Motor</span><span>NEMA23 — 1.9Nm</span></div>
-<div class="spec"><span>Driver</span><span>TB6600 / TMC2209</span></div>
-<div class="spec"><span>Gearbox</span><span>Cycloidal 19:1</span></div>
-<div class="spec"><span>Material</span><span>PETG-CF + Aluminium</span></div>
-<div class="spec"><span>Controller</span><span>Arduino → ESP32-S3</span></div>
-<div class="spec"><span>Range</span><span>180° pitch, zero backlash</span></div>
-<div style="margin-top:16px">
-<span class="tag">FUSION 360</span><span class="tag">PETG-CF</span><span class="tag">CYCLOIDAL</span><span class="tag">NEMA23</span>
-</div>
-</div>
-<div class="card">
-<h3>Status</h3>
-<p style="font-size:14px;color:var(--muted);line-height:1.6">✅ J2 shoulder — 90° ramp tested<br>🔧 J1 base + J3 elbow in progress<br>🎯 Next: Full 6-DOF arm</p>
-</div>
-</div>
+  <div class="grid">
+    <div class="card">
+      <h2>Current Status (Oct 2026)</h2>
+      <ul>
+        <li>✅ J1 Base — complete & printed</li>
+        <li>✅ J2 Shoulder (Nema 23 v7) — 120° ramp motion tested, working</li>
+        <li>✅ J3 Elbow — complete</li>
+        <li>✅ J4 Wrist — almost complete</li>
+        <li>✅ Custom Gripper — built (Toolbox Robotics design)</li>
+        <li>🔧 J5 Wrist Roll — almost done</li>
+        <li>🔧 Haptic Glove V1 — draw-wire + AS5600 sensors, almost complete</li>
+        <li>📟 Next: get the PCB done and working</li>
+        <li>⏳ Final: Full teleop test Glove → Arm</li>
+      </ul>
+    </div>
 
-<div class="about">
-<h2>About Me</h2>
-<p>I'm <strong>Denis Long</strong> — a builder from South Africa obsessed with making robots that actually work.</p>
-<p>I design and build robotic arms from scratch: CAD in Fusion 360, printing in PETG-CF, wiring, coding and testing until it moves. No team, no lab, just my workshop and a lot of failed prints.</p>
-<p>ArmBrain is the larger project, and the shoulder is one major subsystem in that build. I went with a cycloidal gearbox for zero backlash and high torque, because harmonic drives are too expensive for a personal build.</p>
-</div>
+    <div class="card">
+      <h2>Hardware</h2>
+      <ul>
+        <li><strong>Motors:</strong> Nema 23 (J2) + Nema 17 (J1, J3–J5)</li>
+        <li><strong>Reducers:</strong> Custom 3D printed cycloidal drives</li>
+        <li><strong>Sensors:</strong> AS5600 magnetic encoders with diametric magnets</li>
+        <li><strong>Files:</strong> Nema 23 Shoulder v7.step, nema 17 v13.step</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="contact">
-<div class="contact-card">
-<div class="label mono">Email</div>
-<div class="value"><a href="mailto:longdenis333@gmail.com">longdenis333@gmail.com</a></div>
-</div>
-<div class="contact-card">
-<div class="label mono">Phone / WhatsApp</div>
-<div class="value"><a href="tel:+27824968970">082 496 8970</a></div>
-</div>
-</div>
+  <div class="card" style="margin-top:18px;">
+    <h2>Why This Project?</h2>
+    <p>18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1. Goal: just to prove a point.</p>
+    <p><strong>Looking for:</strong> PCB sponsors (PCBWay/JLCPCB), mechatronics internship NL/SA 2027.</p>
+    <p>Built by <a href="https://github.com/Denni112-glitch" target="_blank" rel="noopener noreferrer" style="color:var(--text)">@Denni112-glitch</a> | Future Mechatronics @ Sol-Tech</p>
+  </div>
 
-<div class="links">
-<a class="link-card" href="https://github.com/Denni112-glitch/ArmBrain-J2" target="_blank"><div class="label mono">GitHub</div><div class="value">CAD + Code</div></a>
-<a class="link-card" href="https://www.youtube.com/@Denis_builds08" target="_blank"><div class="label mono">YouTube</div><div class="value">@Denis_builds08</div></a>
-<a class="link-card" href="https://www.instagram.com/denis_builds08/" target="_blank"><div class="label mono">Instagram</div><div class="value">@denis_builds08</div></a>
-<a class="link-card" href="https://x.com/Denis_build08" target="_blank"><div class="label mono">X / Twitter</div><div class="value">@Denis1940714918</div></a>
-<a class="link-card" href="https://www.linkedin.com/in/denis-long-915915290" target="_blank"><div class="label mono">LinkedIn</div><div class="value">Denis Long</div></a>
-</div>
+  <div class="card" style="margin-top:18px;">
+    <h2>Build Logs</h2>
+    <div class="link-list">
+      <a class="link-item" href="https://www.youtube.com/@Denis_builds08" target="_blank">YouTube — @Denis_builds08</a>
+      <a class="link-item" href="https://www.instagram.com/denis_builds08/" target="_blank">Instagram — @denis_builds08</a>
+      <a class="link-item" href="https://github.com/Denni112-glitch/ArmBrain-J2" target="_blank">GitHub — CAD + Code</a>
+      <a class="link-item" href="mailto:longdenis333@gmail.com">Email — longdenis333@gmail.com</a>
+    </div>
+  </div>
 
-<footer><span class="mono">© 2026 DENIS LONG — BUILT IN SA</span><span class="mono">GLOW EDITION ⚡</span></footer>
+  <div class="footer">
+    © 2026 Denis Long — Built in SA
+  </div>
 </div>
 </body>
 </html>

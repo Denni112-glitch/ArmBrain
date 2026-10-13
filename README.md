@@ -5,6 +5,7 @@
 ## Full-System Build
 
 ## ❤️ Official Hardware Sponsor
+![Render 1](Logo.jpg)
 
 <div align="center">
   <a href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">

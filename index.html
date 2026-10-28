@@ -14,7 +14,7 @@ radial-gradient(600px at 15% 10%, rgba(255,221,0,0.18), transparent 60%),
 radial-gradient(800px at 85% 30%, rgba(255,221,0,0.12), transparent 60%),
 radial-gradient(500px at 50% 90%, rgba(42,157,244,0.08), transparent 60%),
 linear-gradient(180deg, #08080a 0%, #0f0f0a 50%, #08080a 100%)}
-body::after{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);background-size:20px 20px,20px 20px;opacity:0.6}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)}
 .mono{font-family:'JetBrains Mono',monospace}
 .wrap{max-width:920px;margin:0 auto;padding:0 24px}
 nav{position:sticky;top:0;z-index:10;background:rgba(8,8,10,0.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:14px 0}
@@ -29,7 +29,7 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 .btn{padding:12px 18px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid transparent}
 .btn-primary{background:var(--accent);color:#000}
 .btn-ghost{border:1px solid var(--border);background:var(--card);color:#fff}
-.sponsor-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 20px;margin:16px 0 26px;border:1px solid rgba(255,221,0,0.25);border-radius:16px;background:linear-gradient(135deg, rgba(255,221,0,0.02), rgba(255,221,0,0.01));position:relative;overflow:visible}
+.sponsor-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 20px;margin:16px 0 26px;border:1px solid rgba(255,221,0,0.25);border-radius:16px;background:rgba(255,221,0,0.02)}
 .sponsor-banner .copy{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
 .sponsor-banner .badge{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,221,0,0.12);border:1px solid rgba(255,221,0,0.45);color:var(--accent);font-size:12px}
 .sponsor-banner strong{color:var(--text)}
@@ -60,7 +60,7 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 <div class="wrap">
   <div class="hero">
     <h1>ArmBrain Project</h1>
-    <p class="sub">Make something from nothing — design, print, wire, code and test a home-built 6DOF robot arm and haptic glove. This repo documents the full build, with the J2 shoulder as one subsystem inside the wider ArmBrain system.</p>
+    <p class="sub">Make something from nothing — design, print, wire, code and test a home-built 6DOF robot arm and haptic glove. This repo documents the full build, with the J2 shoulder as one of the core systems in the bigger ArmBrain stack.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="https://github.com/Denni112-glitch/ArmBrain-J2" target="_blank">View Build Logs →</a>
       <a class="btn btn-ghost" href="https://www.youtube.com/@Denis_builds08" target="_blank">Watch on YouTube</a>
@@ -78,10 +78,21 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
     </div>
   </div>
 
+  <div class="sponsor-banner">
+    <div class="copy">
+      <span class="badge">Materials Sponsor</span>
+      <span><strong>The Filament Guy</strong> supports this project with filament and materials for prototyping.</span>
+    </div>
+    <div class="powered">
+      <img src="https://img.shields.io/badge/Filament%20Support-The%20Filament%20Guy-ffdd00?style=flat&logoColor=black" alt="Filament Support by The Filament Guy">
+      <a class="btn btn-ghost" href="https://www.thefilamentguy.co.za/" target="_blank" rel="noopener noreferrer">Shop Filament</a>
+    </div>
+  </div>
+
   <div class="grid">
     <div class="card">
       <h3>Overview</h3>
-      <p>The ArmBrain project aims to build a full 6DOF arm with cycloidal reducers and a custom haptic glove for teleoperation. The J2 shoulder joint is one important subsystem within the larger system, alongside the base, elbow, wrist, gripper, and teleop control stack.</p>
+      <p>The ArmBrain project aims to build a full 6DOF arm with cycloidal reducers and a custom haptic glove for teleoperation. The J2 shoulder joint is one important subsystem within the larger robotic platform.</p>
 
       <h3 style="margin-top:16px">Build Logs</h3>
       <p class="sub">YouTube: <a href="https://www.youtube.com/@Denis_builds08" target="_blank">@Denis_builds08</a> — Instagram: <a href="https://www.instagram.com/denis_builds08/" target="_blank">@denis_builds08</a></p>
@@ -96,13 +107,13 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 
     <div class="card">
       <h3>Current Status (Oct 2026)</h3>
-      <p style="color:var(--muted);line-height:1.6">✅ J1 Base - complete & printed<br>✅ J2 Shoulder (Nema 23 v7) - 120° ramp motion tested, working<br>✅ J3 Elbow - complete<br>✅ J4 Wrist - almost complete<br>✅ Custom Gripper - built (Toolbox Robotics design)<br>🔧 J5 Wrist Roll - almost done<br>🔧 Haptic Glove V1 - draw-wire + AS5600 sensors, almost complete<br>📟 Next: get the PCB done and working<br>⏳ Final: Full teleop test Glove → Arm</p>
+      <p style="color:var(--muted);line-height:1.6">✅ J1 Base - complete & printed<br>✅ J2 Shoulder (Nema 23 v7) - 120° ramp motion tested, working<br>✅ J3 Elbow - complete<br>✅ J4 Wrist - almost complete<br>✅ Custom Gripper - built (Toolbox Robotics design)<br>🔧 J5 Wrist Roll - almost done<br>🔧 Haptic Glove V1 - draw-wire + AS5600 sensors, almost complete<br>📟 Next: get the PCB done and working<br>⏳ Final: Full teleop test Glove -> Arm</p>
     </div>
   </div>
 
   <div class="about">
     <h2>Why This Project?</h2>
-    <p>18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1. Goal: Just to prove a point — to make something from nothing.</p>
+    <p>18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1. Goal: Just to prove a point — to make something from nothing and create a real functioning robotic system.</p>
     <p><strong>Looking for:</strong> Mechatronics internship NL/SA 2027</p>
   </div>
 
@@ -113,7 +124,7 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
     </div>
     <div class="contact-card">
       <div class="label mono">Social</div>
-      <div class="value"><a href="https://www.youtube.com/@Denis_builds08" target="_blank">YouTube</a> • <a href="https://www.instagram.com/denis_builds08/" target="_blank">Instagram</a> • <a href="https://x.com/Denis_build08" target="_blank">X</a></div>
+      <div class="value"><a href="https://www.youtube.com/@Denis_builds08" target="_blank">YouTube</a> • <a href="https://www.instagram.com/denis_builds08/" target="_blank">Instagram</a> • <a href="https://www.linkedin.com/in/denis-long-915915290" target="_blank">LinkedIn</a></div>
     </div>
   </div>
 

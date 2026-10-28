@@ -13,7 +13,7 @@
   </a>
 </div>
 
-This project is the broader **ArmBrain** robot arm system: a full build from nothing, from design and fabrication to electronics, control, and testing. The **J2 shoulder joint** is one subsystem within that larger project, not the only focus.
+This project is the broader **ArmBrain** robot arm system: a full build from nothing, from design and fabrication to electronics, control, and testing. The **J2 shoulder joint** is one subsystem within the bigger system.
 
 This project is proudly supported by **[PCBWay](https://www.pcbway.com/)** — a trusted platform for custom PCB fabrication and assembly for makers, researchers, and hardware builders.
 
@@ -23,7 +23,19 @@ Big thanks to PCBWay for backing open-source hardware innovation! 🙏
 
 ![Powered by PCBWay](https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway)
 
-The ArmBrain project aims to build a full **6DOF arm** with cycloidal reducers and a custom **haptic glove** for teleoperation. The J2 shoulder joint is one important subsystem inside the bigger system, alongside the base, elbow, wrist, gripper, and teleop control stack.
+## 🧵 Materials Sponsor
+
+<div align="center">
+  <a href="https://www.thefilamentguy.co.za/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Materials%20Sponsor-The%20Filament%20Guy-ffdd00?style=for-the-badge&logoColor=black" alt="Materials Sponsor - The Filament Guy" />
+  </a>
+</div>
+
+This project is also proudly supported by **[The Filament Guy](https://www.thefilamentguy.co.za/)** — a South African supplier of quality 3D printing filament and maker materials.
+
+Big thanks to The Filament Guy for helping keep the prototypes moving forward! 🧵
+
+The ArmBrain project aims to build a full **6DOF arm** with cycloidal reducers and a custom **haptic glove** for teleoperation. The J2 shoulder joint is one important subsystem inside the bigger system.
 
 ![Render 1](<IMG-20261001-WA0018 (1).jpeg>)
 
@@ -51,7 +63,7 @@ The ArmBrain project aims to build a full **6DOF arm** with cycloidal reducers a
     - `nema 17 v13.step` - Full arm assembly
 
 ### Why This Project?
-18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1. Goal: Just to prove a point — to make something from nothing.
+18yo from a small town with sheep and mountains, building what I can't buy. All parts sourced online, designed in Fusion 360, printed on my Bambu Lab A1. Goal: Just to prove a point — to make something from nothing and create a real functioning robotic system.
 
 **Looking for:** Mechatronics internship NL/SA 2027
 

@@ -29,13 +29,14 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 .btn{padding:12px 18px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid transparent}
 .btn-primary{background:var(--accent);color:#000}
 .btn-ghost{border:1px solid var(--border);background:var(--card);color:#fff}
-.sponsor-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 20px;margin:18px -10px 22px;border:1px solid rgba(255,221,0,0.35);border-radius:18px;background:rgba(17,17,19,0.82);position:relative;box-shadow:0 0 0 1px rgba(255,221,0,0.08), 0 12px 30px rgba(0,0,0,0.18)}
-.sponsor-banner + .sponsor-banner{margin-top:10px}
-.sponsor-banner .copy{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
-.sponsor-banner .badge{display:inline-block;padding:8px 16px;border-radius:999px;background:rgba(255,221,0,0.12);border:1px solid rgba(255,221,0,0.45);color:var(--accent);font-size:12px;line-height:1.2}
-.sponsor-banner strong{color:var(--text)}
-.sponsor-banner .powered{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.sponsor-banner .powered img{height:38px;display:block;border-radius:8px;box-shadow:0 6px 24px rgba(255,221,0,0.12);margin-right:-14px}
+.sponsor-shell{margin:26px 0;padding:18px 18px 18px;border:1px solid rgba(255,221,0,0.42);border-radius:22px;background:rgba(17,17,20,0.9);box-shadow:inset 0 0 0 1px rgba(255,221,0,0.08)}
+.sponsor-pill{display:inline-block;padding:8px 16px;border:1px solid rgba(255,221,0,0.45);border-radius:999px;background:rgba(255,221,0,0.04);color:#f0d425;font-size:14px;font-weight:600;letter-spacing:0.2px}
+.sponsor-copy{margin:18px 0 18px;font-size:clamp(22px,3vw,32px);line-height:1.35;color:rgba(255,255,255,0.95);font-weight:400}
+.brand{color:#fff;font-weight:700}
+.sponsor-highlight{display:flex;align-items:center;overflow:hidden;border-radius:18px;width:100%;min-height:62px;box-sizing:border-box}
+.highlight-label{display:flex;align-items:center;justify-content:flex-start;flex:0 0 46%;min-height:62px;background:rgba(255,255,255,0.12);color:rgba(16,16,16,0.82);font-size:clamp(22px,3vw,38px);font-weight:500;letter-spacing:-0.04em;padding:10px 16px}
+.highlight-name{display:flex;align-items:center;justify-content:flex-start;flex:1;min-height:62px;background:#f4d31b;color:#0d0d0d;font-size:clamp(24px,3vw,44px);font-weight:700;letter-spacing:-0.05em;padding:10px 16px}
+.sponsor-button{display:inline-flex;align-items:center;justify-content:center;margin-top:18px;width:100%;padding:18px 20px;border-radius:14px;background:rgba(31,31,35,0.95);border:1px solid rgba(255,255,255,0.06);color:#f7f7f7;font-size:clamp(20px,3vw,30px);font-weight:700;text-decoration:none;box-sizing:border-box}
 .grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:16px;margin:40px 0}
 @media(max-width:820px){.grid{grid-template-columns:1fr}}
 .card{background:rgba(18,18,20,0.9);border:1px solid var(--border);border-radius:16px;padding:22px;backdrop-filter:blur(6px)}
@@ -68,26 +69,24 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
     </div>
   </div>
 
-  <div class="sponsor-banner">
-    <div class="copy">
-      <span class="badge">Official Hardware Sponsor</span>
-      <span><strong>PCBWay</strong> supports this project with PCB fabrication and assembly.</span>
+  <div class="sponsor-shell">
+    <div class="sponsor-pill">Official Hardware Sponsor</div>
+    <div class="sponsor-copy"><span class="brand">PCBWay</span> supports this project with PCB fabrication and assembly.</div>
+    <div class="sponsor-highlight">
+      <div class="highlight-label">Powered by</div>
+      <div class="highlight-name">PCBWay</div>
     </div>
-    <div class="powered">
-      <img src="https://img.shields.io/badge/Powered%20by-PCBWay-ffdd00?style=flat&logo=pcbway&logoColor=black" alt="Powered by PCBWay">
-      <a class="btn btn-ghost" href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">Order PCBs</a>
-    </div>
+    <a class="sponsor-button" href="https://www.pcbway.com/" target="_blank" rel="noopener noreferrer">Order PCBs</a>
   </div>
 
-  <div class="sponsor-banner">
-    <div class="copy">
-      <span class="badge">Materials Sponsor</span>
-      <span><strong>The Filament Guy</strong> supports this project with filament and materials for prototyping.</span>
+  <div class="sponsor-shell">
+    <div class="sponsor-pill">Materials Sponsor</div>
+    <div class="sponsor-copy"><span class="brand">The Filament Guy</span> supports this project with filament and materials for prototyping.</div>
+    <div class="sponsor-highlight">
+      <div class="highlight-label">Filament Support</div>
+      <div class="highlight-name">The Filament Guy</div>
     </div>
-    <div class="powered">
-      <img src="https://img.shields.io/badge/Filament%20Support-The%20Filament%20Guy-ffdd00?style=flat&logoColor=black" alt="Filament Support by The Filament Guy">
-      <a class="btn btn-ghost" href="https://www.thefilamentguy.co.za/" target="_blank" rel="noopener noreferrer">Shop Filament</a>
-    </div>
+    <a class="sponsor-button" href="https://www.thefilamentguy.co.za/" target="_blank" rel="noopener noreferrer">Shop Filament</a>
   </div>
 
   <div class="grid">
